@@ -10,7 +10,7 @@ export async function restore() {
   const decoder = new TextDecoder();
   const str = decoder.decode(file.content);
   for (const [_, [name, value]] of Object.entries(JSON.parse(str)).entries()) {
-    if (excludes.indexOf(name) !== -1) continue;
+    if (excludes.indexOf(name) !== -1 || !value) continue;
     await space.writePage(name, value as string);
     console.log('created page: ', name);
   }
