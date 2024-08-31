@@ -1,34 +1,18 @@
 
-# SilverBullet plug template
+# SilverBullet plug: import from JSON file 
 
-Insert your plug description here
+This plug allows you to import data from a JSON file into your SilverBullet space. This is useful when you have exported data from your SilverBullet space and want to import it into your space.
 
-## Build
-To build this plug, make sure you have [SilverBullet installed with Deno](https://silverbullet.md/Install/Deno). Then, build the plug with:
-
-```shell
-deno task build
+JSON file structure:
+```json
+{
+    "page name": "page content"
+}
 ```
 
-Or to watch for changes and rebuild automatically
-
-```shell
-deno task watch
+Install this plug: run command "Plug: Add" and add the following URL
+```
+github:vuau/silverbullet-plug-import-json/import.plug.js
 ```
 
-Then, copy the resulting `.plug.js` file into your space's `_plug` folder. Or build and copy in one command:
-
-```shell
-deno task build && cp *.plug.js /my/space/_plug/
-```
-
-SilverBullet will automatically sync and load the new version of the plug, just watch the logs (browser and server) to see when this happens.
-
-## Installation
-If you would like to install this plug straight from Github, make sure you have the `.js` file committed to the repo and simply add
-
-```
-- github:user/plugname/plugname.plug.js
-```
-
-to your `PLUGS` file, run `Plugs: Update` command and off you go!
+then, run `Plugs: Update` command.

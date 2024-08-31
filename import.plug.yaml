@@ -1,0 +1,6 @@
+name: import
+functions:
+  restore:
+    path: import.ts:restore
+    command:
+      name: "Restore From JSON"
